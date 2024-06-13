@@ -4,7 +4,7 @@ Dieses Projekt ist ein einfacher Fake-Daten-Generator, der über die FakerAPI vo
 
 ## Funktionalitäten
 
-- Generiert zufällige Namen, E-Mail-Adressen, Geburtsdaten, Berufe und Adressen basierend auf der ausgewählten Sprache.
+- Generiert zufällige Namen, E-Mail-Adressen, Geburtsdaten und Adressen basierend auf der ausgewählten Sprache.
 - Unterstützt verschiedene Sprachen wie Deutsch, Englisch, Französisch, Malaiisch, Chinesisch, Niederländisch und Italienisch.
 
 ## Verwendung
