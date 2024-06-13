@@ -32,7 +32,7 @@ function generateFakeData(lang) {
             const email = `${username}${emailEndings[Math.floor(Math.random() * emailEndings.length)]}`;
             const birthday = person.birthday;
             const job = person.company;
-            const address = `${person.street}, ${person.city}, ${person.country}`;
+            const address = `${person.address.street}, ${person.address.city}, ${person.address.country}`;
 
             displayResults(name, birthday, job, address, email);
         })
