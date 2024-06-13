@@ -22,13 +22,13 @@ function generateFakeData(lang) {
             const birthday = person.birthday || 'Nicht verfügbar';
             const address = person.address ? `${person.address.street}, ${person.address.city}, ${person.address.country}` : 'Nicht verfügbar';
 
-            displayResults(name, birthday, job, address, email);
+            displayResults(name, birthday, address, email);
         })
         .catch(error => console.error('Fehler:', error));
 }
 
 // Funktion zum Anzeigen der Ergebnisse
-function displayResults(name, birthday, job, address, email) {
+function displayResults(name, birthday, address, email) {
     const results = document.getElementById('results');
     results.innerHTML = `
         <p><strong>Name:</strong> ${name}</p>
