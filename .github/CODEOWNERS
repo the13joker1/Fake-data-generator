@@ -1,0 +1,5 @@
+# CODEOWNERS file
+# Defines code owners for specific files or directories
+
+# Default code owner for the entire repository
+*       @the13joker1
