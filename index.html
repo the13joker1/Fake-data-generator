@@ -1,38 +1,26 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fakedaten Generator</title>
+    <title>Fake Data Generator</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <div class="container">
-        <h1 id="pageTitle">Fakedaten Generator</h1>
+        <h1 id="pageTitle">Fake Data Generator</h1>
         <form id="languageForm">
-            <label for="lang">Sprache:</label>
+            <label for="lang">Language:</label>
             <select id="lang">
-                <option value="de">Deutsch</option>
-                <option value="en">Englisch</option>
-                <option value="fr">Französisch</option>
-                <option value="ms">Malaiisch</option>
-                <option value="zh">Chinesisch</option>
-                <option value="nl">Niederländisch</option>
-                <option value="it">Italienisch</option>
+                <option value="de">German</option>
+                <option value="en">English</option>
+                <option value="fr">French</option>
+                <option value="ms">Malay</option>
+                <option value="zh">Chinese</option>
+                <option value="nl">Dutch</option>
+                <option value="it">Italian</option>
             </select>
-            <button type="submit">Generieren</button>
-        </form>
-        <form id="siteLanguageForm">
-            <label for="siteLang">Seite Sprache:</label>
-            <select id="siteLang">
-                <option value="de">Deutsch</option>
-                <option value="en">Englisch</option>
-                <option value="fr">Französisch</option>
-                <option value="ms">Malaiisch</option>
-                <option value="zh">Chinesisch</option>
-                <option value="nl">Niederländisch</option>
-                <option value="it">Italienisch</option>
-            </select>
+            <button type="submit">Generate</button>
         </form>
         <div id="results"></div>
         <div id="disclaimer">
@@ -44,101 +32,5 @@
         </div>
     </div>    
     <script src="script.js"></script>
-    <script>
-        const languageData = {
-            de: {
-                pageTitle: "Fakedaten Generator",
-                generateButton: "Generieren",
-                disclaimer: "Die generierten Daten basieren auf öffentlich verfügbaren Datenbanken und der FakerAPI von fakerapi.it und dienen nur zu illustrativen Zwecken. Alle Daten sind zufällig generiert und stellen keine echten Personen, Adressen oder E-Mails dar.",
-                copyright: "Alle Rechte vorbehalten. Die Nutzung dieses Dienstes unterliegt den Bedingungen der <a href='https://fakerapi.it/'>verwendeten APIs</a> und ihrer jeweiligen Anbieter.",
-                liability: "Für die Genauigkeit und Verwendung der generierten Daten wird keine Haftung übernommen. Verwenden Sie die Daten verantwortungsbewusst und im Einklang mit den geltenden Gesetzen."
-            },
-            en: {
-                pageTitle: "Fake Data Generator",
-                generateButton: "Generate",
-                disclaimer: "The generated data is based on publicly available databases and the FakerAPI from fakerapi.it and is for illustrative purposes only. All data is randomly generated and does not represent real individuals, addresses, or emails.",
-                copyright: "All rights reserved. The use of this service is subject to the terms of the <a href='https://fakerapi.it/'>used APIs</a> and their respective providers.",
-                liability: "No liability is assumed for the accuracy and use of the generated data. Use the data responsibly and in accordance with applicable laws."
-            },
-            fr: {
-                pageTitle: "Générateur de données fictives",
-                generateButton: "Générer",
-                disclaimer: "Les données générées sont basées sur des bases de données publiques disponibles et l'API FakerAPI de fakerapi.it et sont uniquement à des fins illustratives. Toutes les données sont générées de manière aléatoire et ne représentent pas de personnes réelles, d'adresses ou d'e-mails.",
-                copyright: "Tous droits réservés. L'utilisation de ce service est soumise aux conditions des <a href='https://fakerapi.it/'>API utilisées</a> et de leurs fournisseurs respectifs.",
-                liability: "Aucune responsabilité n'est assumée quant à l'exactitude et à l'utilisation des données générées. Utilisez les données de manière responsable et conformément aux lois applicables."
-            },
-            ms: {
-                pageTitle: "Penghasil Data Palsu",
-                generateButton: "Hasilkan",
-                disclaimer: "Data yang dihasilkan adalah berdasarkan pangkalan data yang tersedia secara awam dan FakerAPI dari fakerapi.it dan hanya untuk tujuan ilustrasi. Semua data dihasilkan secara rawak dan tidak mewakili individu sebenar, alamat, atau emel.",
-                copyright: "Semua hak cipta terpelihara. Penggunaan perkhidmatan ini tertakluk kepada syarat-syarat <a href='https://fakerapi.it/'>API yang digunakan</a> dan pembekal masing-masing.",
-                liability: "Tiada liabiliti yang dianggap untuk ketepatan dan penggunaan data yang dihasilkan. Gunakan data secara bertanggungjawab dan mengikut undang-undang yang berkenaan."
-            },
-            zh: {
-                pageTitle: "假数据生成器",
-                generateButton: "生成",
-                disclaimer: "生成的数据基于公开可用的数据库和fakerapi.it的FakerAPI，仅用于说明目的。所有数据均为随机生成，不代表真实个人、地址或电子邮件。",
-                copyright: "版权所有。使用本服务受制于<a href='https://fakerapi.it/'>使用的API</a>的条款及其各自的提供者。",
-                liability: "不对生成数据的准确性和使用承担任何责任。请负责任地使用数据，并遵守适用法律。"
-            },
-            nl: {
-                pageTitle: "Nepgegevens Generator",
-                generateButton: "Genereren",
-                disclaimer: "De gegenereerde gegevens zijn gebaseerd op openbaar beschikbare databases en de FakerAPI van fakerapi.it en zijn uitsluitend bedoeld ter illustratie. Alle gegevens worden willekeurig gegenereerd en vertegenwoordigen geen echte personen, adressen of e-mails.",
-                copyright: "Alle rechten voorbehouden. Het gebruik van deze dienst is onderworpen aan de voorwaarden van de <a href='https://fakerapi.it/'>gebruikte APIs</a> en hun respectievelijke providers.",
-                liability: "Er wordt geen aansprakelijkheid aanvaard voor de nauwkeurigheid en het gebruik van de gegenereerde gegevens. Gebruik de gegevens verantwoordelijk en in overeenstemming met de geldende wetgeving."
-            },
-            it: {
-                pageTitle: "Generatore di Dati Falsi",
-                generateButton: "Genera",
-                disclaimer: "I dati generati sono basati su database pubblici disponibili e su FakerAPI da fakerapi.it e sono solo a scopo illustrativo. Tutti i dati sono generati casualmente e non rappresentano persone reali, indirizzi o e-mail.",
-                copyright: "Tutti i diritti riservati. L'uso di questo servizio è soggetto ai termini delle <a href='https://fakerapi.it/'>API utilizzate</a> e dei rispettivi fornitori.",
-                liability: "Non si assume alcuna responsabilità per l'accuratezza e l'uso dei dati generati. Utilizzare i dati in modo responsabile e in conformità alle leggi applicabili."
-            },
-            // We can add more languages here as needed
-        };
-
-        const langSelect = document.getElementById('lang');
-        const siteLangSelect = document.getElementById('siteLang');
-        const pageTitle = document.getElementById('pageTitle');
-        const generateButton = document.querySelector('#languageForm button');
-        const disclaimerText = document.getElementById('disclaimer-text');
-        const copyrightText = document.getElementById('copyright-text');
-        const disclaimerLiability = document.getElementById('disclaimer-liability');
-
-        function updatePageContent(lang) {
-            pageTitle.textContent = languageData[lang].pageTitle;
-            generateButton.textContent = languageData[lang].generateButton;
-            disclaimerText.innerHTML = languageData[lang].disclaimer;
-            copyrightText.innerHTML = languageData[lang].copyright;
-            disclaimerLiability.innerHTML = languageData[lang].liability;
-        }
-
-        function updateSiteLanguage(lang) {
-            document.documentElement.lang = lang; // Set the HTML lang attribute
-            document.body.dir = (lang === 'ar') ? 'rtl' : 'ltr'; // Example for setting direction
-            // Implement any other changes needed for the entire page
-        }
-
-        function initialize() {
-            const initialLang = 'de'; // Default language
-            updatePageContent(initialLang);
-            updateSiteLanguage(initialLang);
-
-            langSelect.addEventListener('change', function() {
-                const selectedLang = this.value;
-                updatePageContent(selectedLang);
-                updateSiteLanguage(selectedLang);
-            });
-
-            siteLangSelect.addEventListener('change', function() {
-                const selectedLang = this.value;
-                updatePageContent(selectedLang);
-                updateSiteLanguage(selectedLang);
-            });
-        }
-
-        document.addEventListener('DOMContentLoaded', initialize);
-    </script>
 </body>
 </html>
