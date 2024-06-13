@@ -1,44 +1,34 @@
+// Event Listener für das Formular
 document.getElementById('dataForm').addEventListener('submit', function(event) {
-    event.preventDefault();
+    event.preventDefault(); // Verhindert das Standardverhalten des Formulars (z.B. Neuladen der Seite)
     
-    const lang = document.getElementById('lang').value;
-    generateFakeData(lang);
+    const lang = document.getElementById('lang').value; // Wert des Sprachfelds holen
+    generateFakeData(lang); // Generiere Fake-Daten mit der ausgewählten Sprache
 });
 
-const emailEndings = [
-    "@gmail.com", "@yahoo.com", "@outlook.com", "@hotmail.com", "@aol.com",
-    "@icloud.com", "@protonmail.com", "@gmx.de", "@web.de", "@t-online.de",
-    "@freenet.de", "@mail.com", "@zoho.com", "@yandex.com", "@mail.ru",
-    "@live.com", "@aol.de", "@arcor.de", "@yahoo.de", "@gmx.net",
-    "@online.de", "@me.com", "@mac.com", "@freenet.com", "@hotmail.de",
-    "@googlemail.com", "@t-online.com", "@yahoo.co.uk", "@msn.com",
-    "@live.de", "@web.de", "@mail.de", "@google.com", "@ymail.com",
-    "@rocketmail.com", "@inbox.com", "@t-online.at", "@bluewin.ch",
-    "@hotmail.co.uk", "@outlook.de", "@outlook.fr", "@orange.fr",
-    "@laposte.net", "@sfr.fr", "@alice.it", "@libero.it", "@fastmail.com",
-    "@tiscali.it", "@virgilio.it", "@wind.it", "@tin.it", "@alice.de",
-    "@alice.nl", "@virginmedia.com", "@btinternet.com", "@ntlworld.com",
-    "@talktalk.net", "@shaw.ca", "@sympatico.ca", "@telus.net",
-    "@rogers.com", "@bell.net", "@videotron.ca"
-];
-
+// Funktion zur Generierung von Fake-Daten
 function generateFakeData(lang) {
     fetch(`https://fakerapi.it/api/v1/persons?_locale=${lang}&_quantity=1`)
         .then(response => response.json())
         .then(data => {
             const person = data.data[0];
+            if (!person) {
+                console.error('Keine Daten erhalten');
+                return;
+            }
+
             const name = `${person.firstname} ${person.lastname}`;
-            const username = name.toLowerCase().replace(/\s/g, '_');
-            const email = `${username}${emailEndings[Math.floor(Math.random() * emailEndings.length)]}`;
+            const email = person.email || 'Nicht verfügbar'; // Echte E-Mail-Adresse aus der API-Daten verwenden
             const birthday = person.birthday || 'Nicht verfügbar';
             const job = person.company || 'Nicht verfügbar';
             const address = person.address ? `${person.address.street}, ${person.address.city}, ${person.address.country}` : 'Nicht verfügbar';
 
             displayResults(name, birthday, job, address, email);
         })
-        .catch(error => console.error('Error:', error));
+        .catch(error => console.error('Fehler:', error));
 }
 
+// Funktion zum Anzeigen der Ergebnisse
 function displayResults(name, birthday, job, address, email) {
     const results = document.getElementById('results');
     results.innerHTML = `
