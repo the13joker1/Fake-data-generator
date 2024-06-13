@@ -23,48 +23,14 @@
             <button type="submit">Generieren</button>
         </form>
         <div id="results"></div>
-        <div id="disclaimer">
-            <hr>
-            <p id="disclaimer-text"></p>
-            <p id="copyright-text"></p>
-            <p id="disclaimer-liability"></p>
-            <p>&copy; 2024 THE_13joker1.</p>
-        </div>
-    </div>    
+    </div>
+    <div id="disclaimer">
+        <hr>
+        <p><strong>Disclaimer:</strong> Die generierten Daten basieren auf öffentlich verfügbaren Datenbanken und der FakerAPI von fakerapi.it und dienen nur zu illustrativen Zwecken. Alle Daten sind zufällig generiert und stellen keine echten Personen, Adressen oder E-Mails dar.</p>
+        <p><strong>Copyright:</strong> Alle Rechte vorbehalten. Die Nutzung dieses Dienstes unterliegt den Bedingungen der <a href="https://fakerapi.it/">verwendeten APIs</a> und ihrer jeweiligen Anbieter.</p>
+        <p><strong>Haftungsausschluss:</strong> Für die Genauigkeit und Verwendung der generierten Daten wird keine Haftung übernommen. Verwenden Sie die Daten verantwortungsbewusst und im Einklang mit den geltenden Gesetzen.</p>
+        <p>&copy; 2024 <a href="https://github.com/the13joker1">THE_13joker1</a>. Alle Rechte vorbehalten.</p>
+    </div>
     <script src="script.js"></script>
-    <script>
-        const disclaimerTexts = {
-            de: {
-                disclaimer: "Die generierten Daten basieren auf öffentlich verfügbaren Datenbanken und der FakerAPI von fakerapi.it und dienen nur zu illustrativen Zwecken. Alle Daten sind zufällig generiert und stellen keine echten Personen, Adressen oder E-Mails dar.",
-                copyright: "Alle Rechte vorbehalten. Die Nutzung dieses Dienstes unterliegt den Bedingungen der <a href='https://fakerapi.it/'>verwendeten APIs</a> und ihrer jeweiligen Anbieter.",
-                liability: "Für die Genauigkeit und Verwendung der generierten Daten wird keine Haftung übernommen. Verwenden Sie die Daten verantwortungsbewusst und im Einklang mit den geltenden Gesetzen."
-            },
-            en: {
-                disclaimer: "The generated data is based on publicly available databases and the FakerAPI from fakerapi.it and is for illustrative purposes only. All data is randomly generated and does not represent real individuals, addresses, or emails.",
-                copyright: "All rights reserved. The use of this service is subject to the terms of the <a href='https://fakerapi.it/'>used APIs</a> and their respective providers.",
-                liability: "No liability is assumed for the accuracy and use of the generated data. Use the data responsibly and in accordance with applicable laws."
-            },
-            // Add other languages as needed
-        };
-
-        const langSelect = document.getElementById('lang');
-        const disclaimerText = document.getElementById('disclaimer-text');
-        const copyrightText = document.getElementById('copyright-text');
-        const disclaimerLiability = document.getElementById('disclaimer-liability');
-
-        function updateDisclaimer(lang) {
-            disclaimerText.innerHTML = disclaimerTexts[lang].disclaimer;
-            copyrightText.innerHTML = disclaimerTexts[lang].copyright;
-            disclaimerLiability.innerHTML = disclaimerTexts[lang].liability;
-        }
-
-        langSelect.addEventListener('change', function() {
-            const selectedLang = langSelect.value;
-            updateDisclaimer(selectedLang);
-        });
-
-        // Initialize with default language
-        updateDisclaimer(langSelect.value);
-    </script>
 </body>
 </html>
