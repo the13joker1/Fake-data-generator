@@ -20,7 +20,7 @@ function generateFakeData(lang) {
             const name = `${person.firstname} ${person.lastname}`;
             const email = person.email || 'Nicht verfügbar'; // Echte E-Mail-Adresse aus der API-Daten verwenden
             const birthday = person.birthday || 'Nicht verfügbar';
-            const job = person.company || 'Nicht verfügbar';
+            // const job = person.company || 'Nicht verfügbar';
             const address = person.address ? `${person.address.street}, ${person.address.city}, ${person.address.country}` : 'Nicht verfügbar';
 
             displayResults(name, birthday, job, address, email);
