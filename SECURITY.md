@@ -18,7 +18,7 @@ Das Team hinter dem Fake Data Generator ist verantwortlich für:
 
 Wenn du ein Sicherheitsproblem entdeckst, melde es bitte vertraulich an THE_13joker1 auf [Github](https://github.com/the13joker1) oder [Reddit](https://www.reddit.com/user/THE_13joker1/)
 
-THE_13joker1 so schnell wie möglich antworten und angemessene Maßnahmen ergreifen.
+THE_13joker1 wird so schnell wie möglich antworten und angemessene Maßnahmen ergreifen.
 
 ## Sicherheitspraktiken
 
@@ -53,7 +53,7 @@ The team behind the Fake Data Generator is responsible for:
 
 If you discover a security issue, please report it confidentially to THE_13joker1 on [Github](https://github.com/the13joker1) or [Reddit](https://www.reddit.com/user/THE_13joker1/)
 
-THE_13joker1 respond as soon as possible and take appropriate measures.
+THE_13joker1 will respond as soon as possible and take appropriate action.
 
 ## Security practices
 
