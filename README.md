@@ -30,3 +30,43 @@ Entwickelt von [THE_13joker1](https://github.com/the13joker1)
 ## Lizenz
 
 Dieses Projekt ist unter der [MIT Lizenz](https://opensource.org/licenses/MIT) lizenziert.
+***
+# Fake Data Generator
+
+This project is a simple fake data generator that generates random person information via the FakerAPI of fakerapi.it. These data are purely fictitious and are for illustrative purposes only.
+
+## Functionalities
+
+- Generates random names, email addresses, dates of birth and addresses based on the selected language.
+
+- Supports different languages such as German, English, French, Malay, Chinese, Dutch and Italian.
+
+## Use
+
+1. **Select language**: Select the desired language from the drop-down menu.
+
+2. **Generate data**: Click on the "Generate" button to get random fake data.
+
+3. **Show results**: The generated data is displayed below the form.
+
+## Technologies
+
+- HTML, CSS for the structure and design.
+
+- JavaScript for API calls and data processing.
+
+- FakerAPI from fakerapi.it for the generation of fake data.
+
+## Disclaimer
+
+The generated data is based on publicly available databases and is for illustrative purposes only. They do not represent real persons, addresses or emails. The use of this service is subject to the terms of the APIs used and their respective providers.
+
+## Author
+
+Developed by [THE_13joker1](https://github.com/the13joker1)
+
+## License
+
+This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+
+***
