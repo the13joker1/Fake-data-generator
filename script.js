@@ -30,9 +30,9 @@ function generateFakeData(lang) {
             const name = `${person.firstname} ${person.lastname}`;
             const username = name.toLowerCase().replace(/\s/g, '_');
             const email = `${username}${emailEndings[Math.floor(Math.random() * emailEndings.length)]}`;
-            const birthday = person.birthday;
-            const job = person.company;
-            const address = `${person.address.street}, ${person.address.city}, ${person.address.country}`;
+            const birthday = person.birthday || 'Nicht verfügbar';
+            const job = person.company || 'Nicht verfügbar';
+            const address = person.address ? `${person.address.street}, ${person.address.city}, ${person.address.country}` : 'Nicht verfügbar';
 
             displayResults(name, birthday, job, address, email);
         })
