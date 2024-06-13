@@ -34,7 +34,7 @@ function displayResults(name, birthday, job, address, email) {
     results.innerHTML = `
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Geburtsdatum:</strong> ${birthday}</p>
-        <p><strong>Beruf:</strong> ${job}</p>
+
         <p><strong>Adresse:</strong> ${address}</p>
         <p><strong>E-Mail:</strong> ${email}</p>
     `;
