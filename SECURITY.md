@@ -16,13 +16,9 @@ Das Team hinter dem Fake Data Generator ist verantwortlich für:
 
 ## Meldung von Sicherheitsproblemen
 
-Wenn du ein Sicherheitsproblem entdeckst, melde es bitte vertraulich an das Team. Bitte folge diesen Schritten:
+Wenn du ein Sicherheitsproblem entdeckst, melde es bitte vertraulich an THE_13joker1 auf [Github](https://github.com/the13joker1) oder [Reddit](https://www.reddit.com/user/THE_13joker1/)
 
-
-2. Verwende einen sicheren Kommunikationskanal für die Details, falls erforderlich.
-3. Bitte beschreibe das Problem so detailliert wie möglich.
-
-Das Team wird so schnell wie möglich antworten und angemessene Maßnahmen ergreifen.
+THE_13joker1 so schnell wie möglich antworten und angemessene Maßnahmen ergreifen.
 
 ## Sicherheitspraktiken
 
