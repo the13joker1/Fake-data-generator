@@ -9,7 +9,7 @@
 <body>
     <div class="container">
         <h1>Fakedaten Generator</h1>
-        <form id="dataForm">
+        <form id="languageForm">
             <label for="lang">Sprache:</label>
             <select id="lang">
                 <option value="de">Deutsch</option>
@@ -22,15 +22,97 @@
             </select>
             <button type="submit">Generieren</button>
         </form>
+        <form id="siteLanguageForm">
+            <label for="siteLang">Seite auf Englisch:</label>
+            <select id="siteLang">
+                <option value="de">Nein</option>
+                <option value="en">Ja</option>
+            </select>
+        </form>
         <div id="results"></div>
-    </div>
-    <div id="disclaimer">
-        <hr>
-        <p><strong>Disclaimer:</strong> Die generierten Daten basieren auf öffentlich verfügbaren Datenbanken und der FakerAPI von fakerapi.it und dienen nur zu illustrativen Zwecken. Alle Daten sind zufällig generiert und stellen keine echten Personen, Adressen oder E-Mails dar.</p>
-        <p><strong>Copyright:</strong> Alle Rechte vorbehalten. Die Nutzung dieses Dienstes unterliegt den Bedingungen der <a href="https://fakerapi.it/">verwendeten APIs</a> und ihrer jeweiligen Anbieter.</p>
-        <p><strong>Haftungsausschluss:</strong> Für die Genauigkeit und Verwendung der generierten Daten wird keine Haftung übernommen. Verwenden Sie die Daten verantwortungsbewusst und im Einklang mit den geltenden Gesetzen.</p>
-        <p>&copy; 2024 <a href="https://github.com/the13joker1">THE_13joker1</a>. Alle Rechte vorbehalten.</p>
-    </div>
+        <div id="disclaimer">
+            <hr>
+            <p id="disclaimer-text"></p>
+            <p id="copyright-text"></p>
+            <p id="disclaimer-liability"></p>
+            <p>&copy; 2024 THE_13joker1.</p>
+        </div>
+    </div>    
     <script src="script.js"></script>
+    <script>
+        const disclaimerTexts = {
+            de: {
+                disclaimer: "Die generierten Daten basieren auf öffentlich verfügbaren Datenbanken und der FakerAPI von fakerapi.it und dienen nur zu illustrativen Zwecken. Alle Daten sind zufällig generiert und stellen keine echten Personen, Adressen oder E-Mails dar.",
+                copyright: "Alle Rechte vorbehalten. Die Nutzung dieses Dienstes unterliegt den Bedingungen der <a href='https://fakerapi.it/'>verwendeten APIs</a> und ihrer jeweiligen Anbieter.",
+                liability: "Für die Genauigkeit und Verwendung der generierten Daten wird keine Haftung übernommen. Verwenden Sie die Daten verantwortungsbewusst und im Einklang mit den geltenden Gesetzen."
+            },
+            en: {
+                disclaimer: "The generated data is based on publicly available databases and the FakerAPI from fakerapi.it and is for illustrative purposes only. All data is randomly generated and does not represent real individuals, addresses, or emails.",
+                copyright: "All rights reserved. The use of this service is subject to the terms of the <a href='https://fakerapi.it/'>used APIs</a> and their respective providers.",
+                liability: "No liability is assumed for the accuracy and use of the generated data. Use the data responsibly and in accordance with applicable laws."
+            },
+            fr: {
+                disclaimer: "Les données générées sont basées sur des bases de données publiques disponibles et l'API FakerAPI de fakerapi.it et sont uniquement à des fins illustratives. Toutes les données sont générées de manière aléatoire et ne représentent pas de personnes réelles, d'adresses ou d'e-mails.",
+                copyright: "Tous droits réservés. L'utilisation de ce service est soumise aux conditions des <a href='https://fakerapi.it/'>API utilisées</a> et de leurs fournisseurs respectifs.",
+                liability: "Aucune responsabilité n'est assumée quant à l'exactitude et à l'utilisation des données générées. Utilisez les données de manière responsable et conformément aux lois applicables."
+            },
+            ms: {
+                disclaimer: "Data yang dihasilkan adalah berdasarkan pangkalan data yang tersedia secara awam dan FakerAPI dari fakerapi.it dan hanya untuk tujuan ilustrasi. Semua data dihasilkan secara rawak dan tidak mewakili individu sebenar, alamat, atau emel.",
+                copyright: "Semua hak cipta terpelihara. Penggunaan perkhidmatan ini tertakluk kepada syarat-syarat <a href='https://fakerapi.it/'>API yang digunakan</a> dan pembekal masing-masing.",
+                liability: "Tiada liabiliti yang dianggap untuk ketepatan dan penggunaan data yang dihasilkan. Gunakan data secara bertanggungjawab dan mengikut undang-undang yang berkenaan."
+            },
+            zh: {
+                disclaimer: "生成的数据基于公开可用的数据库和fakerapi.it的FakerAPI，仅用于说明目的。所有数据均为随机生成，不代表真实个人、地址或电子邮件。",
+                copyright: "版权所有。使用本服务受制于<a href='https://fakerapi.it/'>使用的API</a>的条款及其各自的提供者。",
+                liability: "不对生成数据的准确性和使用承担任何责任。请负责任地使用数据，并遵守适用法律。"
+            },
+            nl: {
+                disclaimer: "De gegenereerde gegevens zijn gebaseerd op openbaar beschikbare databases en de FakerAPI van fakerapi.it en zijn uitsluitend bedoeld ter illustratie. Alle gegevens worden willekeurig gegenereerd en vertegenwoordigen geen echte personen, adressen of e-mails.",
+                copyright: "Alle rechten voorbehouden. Het gebruik van deze dienst is onderworpen aan de voorwaarden van de <a href='https://fakerapi.it/'>gebruikte APIs</a> en hun respectievelijke providers.",
+                liability: "Er wordt geen aansprakelijkheid aanvaard voor de nauwkeurigheid en het gebruik van de gegenereerde gegevens. Gebruik de gegevens verantwoordelijk en in overeenstemming met de geldende wetgeving."
+            },
+            it: {
+                disclaimer: "I dati generati sono basati su database pubblici disponibili e su FakerAPI da fakerapi.it e sono solo a scopo illustrativo. Tutti i dati sono generati casualmente e non rappresentano persone reali, indirizzi o e-mail.",
+                copyright: "Tutti i diritti riservati. L'uso di questo servizio è soggetto ai termini delle <a href='https://fakerapi.it/'>API utilizzate</a> e dei rispettivi fornitori.",
+                liability: "Non si assume alcuna responsabilità per l'accuratezza e l'uso dei dati generati. Utilizzare i dati in modo responsabile e in conformità alle leggi applicabili."
+            },
+            // We can add more languages here as needed
+        };
+
+        const langSelect = document.getElementById('lang');
+        const siteLangSelect = document.getElementById('siteLang');
+        const disclaimerText = document.getElementById('disclaimer-text');
+        const copyrightText = document.getElementById('copyright-text');
+        const disclaimerLiability = document.getElementById('disclaimer-liability');
+
+        function updateDisclaimer(lang) {
+            disclaimerText.innerHTML = disclaimerTexts[lang].disclaimer;
+            copyrightText.innerHTML = disclaimerTexts[lang].copyright;
+            disclaimerLiability.innerHTML = disclaimerTexts[lang].liability;
+        }
+
+        function updateSiteLanguage(lang) {
+            document.documentElement.lang = lang; // Set the HTML lang attribute
+            langSelect.value = lang; // Update the main language dropdown
+            updateDisclaimer(lang);
+        }
+
+        langSelect.addEventListener('change', function() {
+            const selectedLang = langSelect.value;
+            updateDisclaimer(selectedLang);
+        });
+
+        siteLangSelect.addEventListener('change', function() {
+            const selectedSiteLang = siteLangSelect.value;
+            if (selectedSiteLang === 'en') {
+                updateSiteLanguage('en');
+            } else {
+                updateSiteLanguage('de'); // Default to German if 'Nein' is selected
+            }
+        });
+
+        // Initialize with default language
+        updateDisclaimer(langSelect.value);
+    </script>
 </body>
 </html>
