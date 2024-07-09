@@ -16,7 +16,7 @@ The team behind the Fake Data Generator is responsible for:
 
 ## Reporting of security problems
 
-If you discover a security issue, please report it confidentially to THE_13joker1 on [Github](https://github.com/the13joker1) or [Reddit](https://www.reddit.com/user/THE_13joker1/)
+If you discover a security issue, please report it confidentially to THE_13joker1 on  [Reddit](https://www.reddit.com/user/THE_13joker1/) or Email (the.13joker1@gmail.com)
 
 THE_13joker1 will respond as soon as possible and take appropriate action.
 
