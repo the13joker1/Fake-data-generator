@@ -1,72 +1,58 @@
-# Fake Data Generator
+<h1 align="center" id="title">Fake Data Generator</h1>
 
-This project is a simple fake data generator that generates random person information via the FakerAPI of fakerapi.it. These data are purely fictitious and are for illustrative purposes only.
+<p align="center">
+  <img src="https://socialify.git.ci/the13joker1/Fake-data-generator/image?forks=1&amp;issues=1&amp;language=1&amp;name=1&amp;owner=1&amp;pulls=1&amp;stargazers=1&amp;theme=Light" alt="project-image">
+</p>
 
-## Functionalities
+<p id="description">This project is a simple fake data generator that generates random personal information via the FakerAPI of fakerapi.it. These data are purely fictitious and serve only for illustrative purposes.</p>
 
-- Generates random names, email addresses, dates of birth and addresses based on the selected language.
+<p align="center">
+  <img src="https://img.shields.io/github/license/the13joker1/Fake-data-generator%0A" alt="shields">
+</p>
 
-- Supports different languages such as German, English, French, Malay, Chinese, Dutch and Italian.
+<h2>🚀 Demo</h2>
 
-## Use
+<p><a href="https://the13joker1.github.io/Fake-data-generator/">https://the13joker1.github.io/Fake-data-generator/</a></p>
 
-1. **Select language**: Select the desired language from the drop-down menu.
+<h2>🧐 Features</h2>
 
-2. **Generate data**: Click on the "Generate" button to get random fake data.
+Here're some of the project's best features:
 
-3. **Show results**: The generated data is displayed below the form.
+* Generated placeholder data
 
-## Technologies
+<h2>🛠 Functionalities</h2>
 
-- HTML, CSS for the structure and design.
+* Generates random names, email addresses, dates of birth, and addresses based on the selected language.
+* Supports different languages such as German, English, French, Malay, Chinese, Dutch, and Italian.
 
-- JavaScript for API calls and data processing.
+<h2>🔧 How to Use</h2>
 
-- FakerAPI from fakerapi.it for the generation of fake data.
+* **Select language:** Select the desired language from the drop-down menu.
+* **Generate data:** Click on the "Generate" button to get random fake data.
+* **Show results:** The generated data is displayed below the form.
 
-## Disclaimer
+<h2>📚 Technologies</h2>
 
-The generated data is based on publicly available databases and is for illustrative purposes only. They do not represent real persons, addresses or emails. The use of this service is subject to the terms of the APIs used and their respective providers.
+Technologies used in the project:
 
-## Author
+* **HTML** and **CSS** for structure and design.
+* **JavaScript** for API calls and data processing.
+* **FakerAPI** from fakerapi.it for the generation of fake data.
 
-Developed by [THE_13joker1](https://github.com/the13joker1)
+<h2>Project Screenshots:</h2>
 
-## License
+<img src="https://the13joker1.github.io/Fake-data-generator/screenshot1.jpeg" alt="project-screenshot" width="300" height="300"/>
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+<img src="https://the13joker1.github.io/Fake-data-generator/screenshot2.jpeg" alt="project-screenshot" width="300" height="300"/>
 
-***
-# Fake Daten Generator
+<h2>⚠️ Disclaimer</h2>
 
-Dieses Projekt ist ein einfacher Fake-Daten-Generator, der über die FakerAPI von fakerapi.it zufällige Personeninformationen generiert. Diese Daten sind rein fiktiv und dienen nur zu illustrativen Zwecken.
+The generated data is based on publicly available databases and is for illustrative purposes only. They do not represent real persons, addresses, or emails. The use of this service is subject to the terms of the APIs used and their respective providers.
 
-## Funktionalitäten
+<h2>👤 Author</h2>
 
-- Generiert zufällige Namen, E-Mail-Adressen, Geburtsdaten und Adressen basierend auf der ausgewählten Sprache.
-- Unterstützt verschiedene Sprachen wie Deutsch, Englisch, Französisch, Malaiisch, Chinesisch, Niederländisch und Italienisch.
+Developed by THE_13joker1
 
-## Verwendung
+<h2>📜 License</h2>
 
-1. **Sprache wählen**: Wähle die gewünschte Sprache aus dem Dropdown-Menü.
-2. **Daten generieren**: Klicke auf den "Generieren" Button, um zufällige Fake-Daten zu erhalten.
-3. **Ergebnisse anzeigen**: Die generierten Daten werden unterhalb des Formulars angezeigt.
-
-## Technologien
-
-- HTML, CSS für die Struktur und das Design.
-- JavaScript für die API-Aufrufe und die Datenverarbeitung.
-- FakerAPI von fakerapi.it für die Generierung der Fake-Daten.
-
-## Disclaimer
-
-Die generierten Daten basieren auf öffentlich verfügbaren Datenbanken und dienen nur zu illustrativen Zwecken. Sie stellen keine echten Personen, Adressen oder E-Mails dar. Die Nutzung dieses Dienstes unterliegt den Bedingungen der verwendeten APIs und ihrer jeweiligen Anbieter.
-
-## Autor
-
-Entwickelt von [THE_13joker1](https://github.com/the13joker1)
-
-## Lizenz
-
-Dieses Projekt ist unter der [MIT Lizenz](https://opensource.org/licenses/MIT) lizenziert.
-***
+This project is licensed under the MIT License.
