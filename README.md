@@ -55,4 +55,4 @@ Developed by THE_13joker1
 
 <h2>📜 License</h2>
 
-This project is licensed under the MIT License.
+This project is licensed under the Mozilla Public License Version 2.0
