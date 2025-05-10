@@ -55,4 +55,4 @@ Developed by Jonas13-01 (earlier THE_13joker1)
 
 <h2>📜 License</h2>
 
-This project is licensed under the Mozilla Public License Version 2.0
+This project is licensed under the BSD 3-Clause "New" or "Revised" License
