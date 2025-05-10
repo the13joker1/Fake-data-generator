@@ -41,9 +41,9 @@ Technologies used in the project:
 
 <h2>Project Screenshots:</h2>
 
-<img src="https://the13joker1.github.io/Fake-data-generator/screenshot1.jpeg" alt="project-screenshot" width="300" height="300"/>
+<img src="https://jonas13-01.github.io/Fake-data-generator/screenshot1.jpeg" alt="project-screenshot" width="300" height="300"/>
 
-<img src="https://the13joker1.github.io/Fake-data-generator/screenshot2.jpeg" alt="project-screenshot" width="300" height="300"/>
+<img src="https://jonas13-01.github.io/Fake-data-generator/screenshot2.jpeg" alt="project-screenshot" width="300" height="300"/>
 
 <h2>⚠️ Disclaimer</h2>
 
@@ -51,7 +51,7 @@ The generated data is based on publicly available databases and is for illustrat
 
 <h2>👤 Author</h2>
 
-Developed by THE_13joker1
+Developed by Jonas13-01 (earlier THE_13joker1)
 
 <h2>📜 License</h2>
 
