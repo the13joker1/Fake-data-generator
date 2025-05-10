@@ -12,7 +12,7 @@
 
 <h2>🚀 Demo</h2>
 
-<p><a href="https://the13joker1.github.io/Fake-data-generator/">https://the13joker1.github.io/Fake-data-generator/</a></p>
+<p><a href="https://jonas13-01.github.io/Fake-data-generator/">https://the13joker1.github.io/Fake-data-generator/</a></p>
 
 <h2>🧐 Features</h2>
 
