@@ -1,4 +1,4 @@
-// Add event listener to the form
+// Handle form submission
 document.getElementById('dataForm').addEventListener('submit', event => {
     event.preventDefault();
     fetchFakePerson();
@@ -30,7 +30,7 @@ function fetchFakePerson() {
         });
 }
 
-// Render results to the page
+// Display fetched results
 function renderResults(name, birthday, address, email) {
     document.getElementById('results').innerHTML = `
         <p><strong>Name:</strong> ${name}</p>
@@ -40,9 +40,9 @@ function renderResults(name, birthday, address, email) {
     `;
 }
 
-// Display an error message in red
+// Display error in red
 function showError(message) {
     document.getElementById('results').innerHTML = `
-        <p style="color: red;"><strong>Error:</strong> ${message}</p>
+        <p class="error"><strong>Error:</strong> ${message}</p>
     `;
 }
