@@ -22,12 +22,11 @@ Here're some of the project's best features:
 
 <h2>🛠 Functionalities</h2>
 
-* Generates random names, email addresses, dates of birth, and addresses based on the selected language.
-* Supports different languages such as German, English, French, Malay, Chinese, Dutch, and Italian.
+* Generates random names, email addresses, dates of birth, and addresses.
 
 <h2>🔧 How to Use</h2>
 
-* **Select language:** Select the desired language from the drop-down menu.
+
 * **Generate data:** Click on the "Generate" button to get random fake data.
 * **Show results:** The generated data is displayed below the form.
 
