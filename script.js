@@ -1,39 +1,48 @@
-// Event Listener für das Formular
-document.getElementById('dataForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Verhindert das Standardverhalten des Formulars (z.B. Neuladen der Seite)
-    
-
-    generateFakeData(); // Generiere Fake-Daten mit der ausgewählten Sprache
+// Add event listener to the form
+document.getElementById('dataForm').addEventListener('submit', event => {
+    event.preventDefault();
+    fetchFakePerson();
 });
 
-// Funktion zur Generierung von Fake-Daten
-function generateFakeData() {
-    fetch(`https://fakerapi.it/api/v1/persons?_locale=en&_quantity=1`)
-        .then(response => response.json())
+// Fetch and display fake person data
+function fetchFakePerson() {
+    fetch('https://fakerapi.it/api/v1/persons?_locale=en&_quantity=1')
+        .then(res => res.json())
         .then(data => {
-            const person = data.data[0];
+            const person = data.data?.[0];
             if (!person) {
-                console.error('Keine Daten erhalten');
+                showError('No data received from the API.');
                 return;
             }
 
             const name = `${person.firstname} ${person.lastname}`;
-            const email = person.email || 'Nicht verfügbar'; // Echte E-Mail-Adresse aus der API-Daten verwenden
-            const birthday = person.birthday || 'Nicht verfügbar';
-            const address = person.address ? `${person.address.street}, ${person.address.city}, ${person.address.country}` : 'Nicht verfügbar';
+            const email = person.email || 'Unavailable';
+            const birthday = person.birthday || 'Unavailable';
+            const address = person.address
+                ? `${person.address.street}, ${person.address.city}, ${person.address.country}`
+                : 'Unavailable';
 
-            displayResults(name, birthday, address, email);
+            renderResults(name, birthday, address, email);
         })
-        .catch(error => console.error('Fehler:', error));
+        .catch(err => {
+            console.error('API error:', err);
+            showError('An error occurred while fetching data. Please try again later.');
+        });
 }
 
-// Funktion zum Anzeigen der Ergebnisse
-function displayResults(name, birthday, address, email) {
-    const results = document.getElementById('results');
-    results.innerHTML = `
+// Render results to the page
+function renderResults(name, birthday, address, email) {
+    document.getElementById('results').innerHTML = `
         <p><strong>Name:</strong> ${name}</p>
         <p><strong>Date of Birth:</strong> ${birthday}</p>
-        <p><strong>Adress:</strong> ${address}</p>
-        <p><strong>E-Mail:</strong> ${email}</p>
+        <p><strong>Address:</strong> ${address}</p>
+        <p><strong>Email:</strong> ${email}</p>
+    `;
+}
+
+// Display an error message in red
+function showError(message) {
+    document.getElementById('results').innerHTML = `
+        <p style="color: red;"><strong>Error:</strong> ${message}</p>
     `;
 }
