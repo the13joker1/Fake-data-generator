@@ -84,3 +84,17 @@ hr {
     border-top: 1px solid #ddd;
     margin: 20px 0;
 }
+
+.error {
+            color: red;
+            font-weight: bold;
+        }
+        .container {
+            max-width: 600px;
+            margin: 2rem auto;
+            padding: 1rem;
+            font-family: sans-serif;
+        }
+        #results p {
+            margin: 0.5rem 0;
+        }
